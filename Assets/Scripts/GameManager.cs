@@ -1,4 +1,4 @@
-﻿using System.Collections;
+﻿// GameManager.cs
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -22,7 +22,7 @@ public class GameManager : MonoBehaviour
 
     private void Update()
     {
-        if (uiManager == null) return; // Evita el crash
+        if (uiManager == null) return;
 
         if (juegoTerminado && Input.GetKeyDown(KeyCode.R))
         {
