@@ -1,16 +1,25 @@
 fileFormatVersion: 2
-guid: b399e409dd2305b459d542fa19caa4eb
+guid: cbb46d43a9da63142bd2fdfdf078da63
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
     100000: //RootNode
     400000: //RootNode
-    2100000: Material.008
-    2100002: Material.009
+    2100000: Material.002
     2300000: //RootNode
     3300000: //RootNode
-    4300000: Plane.001
-  externalObjects: {}
+    4300000: Plane
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.002
+    second: {fileID: 2100000, guid: 3becec1d2e0d21e4eb59fe9ba641b130, type: 2}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: 'techo que ha q remplazar por el q ya tenemos por este '
+    second: {fileID: 2800000, guid: e9f1ff82ae0ca5044970e209f5d51b4a, type: 3}
   materials:
     importMaterials: 1
     materialName: 0
