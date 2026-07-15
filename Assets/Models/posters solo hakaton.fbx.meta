@@ -1,55 +1,15 @@
 fileFormatVersion: 2
-guid: 9732925295c06174387f2d9a8d42e451
+guid: a2cd5f8c52fa1ed45bf2c5c3ebbe0187
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
-    100000: pared fondo
-    100002: pared lado quesada
-    100004: pared pizarron
-    100006: pared puerta
-    100008: //RootNode
-    400000: pared fondo
-    400002: pared lado quesada
-    400004: pared pizarron
-    400006: pared puerta
-    400008: //RootNode
-    2100000: Material.054
-    2100002: Material.001
-    2100004: Material.002
-    2100006: Material.003
-    2300000: pared fondo
-    2300002: pared lado quesada
-    2300004: pared pizarron
-    2300006: pared puerta
-    3300000: pared fondo
-    3300002: pared lado quesada
-    3300004: pared pizarron
-    3300006: pared puerta
-    4300000: pared puerta
-    4300002: pared pizarron
-    4300004: pared lado quesada
-    4300006: pared fondo
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Material.001
-    second: {fileID: 2100000, guid: 5df4d3dbe3483c44988b160e8c9ba327, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Material.002
-    second: {fileID: 2100000, guid: 9ec5991040572ac478d7d68912bb5528, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Material.003
-    second: {fileID: 2100000, guid: 2735983e34192184bb250f47ad850034, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Material.054
-    second: {fileID: 2100000, guid: eaec85febe585554693f3f61595e4364, type: 2}
+    100000: //RootNode
+    400000: //RootNode
+    2100000: Material.003
+    2300000: //RootNode
+    3300000: //RootNode
+    4300000: hakaton
+  externalObjects: {}
   materials:
     importMaterials: 1
     materialName: 0
@@ -89,7 +49,7 @@ ModelImporter:
     importCameras: 1
     importLights: 1
     swapUVChannels: 0
-    generateSecondaryUV: 1
+    generateSecondaryUV: 0
     useFileUnits: 1
     optimizeMeshForGPU: 1
     keepQuads: 0
