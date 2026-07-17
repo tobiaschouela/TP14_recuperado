@@ -1,5 +1,4 @@
-﻿// GameManager.cs
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
@@ -9,37 +8,39 @@ public class GameManager : MonoBehaviour
 
     private UImanager uiManager;
     private bool timerActivo = true;
-    private bool juegoTerminado = false;
 
     private void Awake()
     {
+        // IMPORTANTE
         Time.timeScale = 1f;
-        uiManager = FindObjectOfType<UImanager>();
 
-        if (uiManager == null)
-            Debug.LogError("UImanager no encontrado en la escena!");
+        uiManager = FindObjectOfType<UImanager>();
     }
 
     private void Update()
     {
-        if (uiManager == null) return;
-
-        if (juegoTerminado && Input.GetKeyDown(KeyCode.R))
+        // Reiniciar SIEMPRE con R
+        if (Input.GetKeyDown(KeyCode.R))
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            ReiniciarPartida();
         }
 
-        if (!timerActivo) return;
+        if (!timerActivo)
+            return;
 
         timer -= Time.deltaTime;
-        uiManager.UpdateTimer(timer);
+
+        if (uiManager != null)
+            uiManager.UpdateTimer(timer);
 
         if (timer <= 0f)
         {
             timer = 0f;
             timerActivo = false;
-            juegoTerminado = true;
-            uiManager.MostrarPantallaGameOver();
+
+            if (uiManager != null)
+                uiManager.MostrarPantallaGameOver();
+
             Time.timeScale = 0f;
         }
     }
@@ -47,8 +48,20 @@ public class GameManager : MonoBehaviour
     public void TerminarJuegoVictoria()
     {
         timerActivo = false;
-        juegoTerminado = true;
-        uiManager.MostrarPantallaWin();
+
+        if (uiManager != null)
+            uiManager.MostrarPantallaWin();
+
         Time.timeScale = 0f;
+    }
+
+    private void ReiniciarPartida()
+    {
+        // Despausar antes de cargar
+        Time.timeScale = 1f;
+
+        SceneManager.LoadScene(
+            SceneManager.GetActiveScene().buildIndex
+        );
     }
 }
